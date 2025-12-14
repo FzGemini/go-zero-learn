@@ -6,10 +6,10 @@ package logic
 import (
 	"context"
 
+	"github.com/zeromicro/go-zero/core/logx"
+
 	"hello01/internal/svc"
 	"hello01/internal/types"
-
-	"github.com/zeromicro/go-zero/core/logx"
 )
 
 type Hello01Logic struct {
@@ -27,7 +27,9 @@ func NewHello01Logic(ctx context.Context, svcCtx *svc.ServiceContext) *Hello01Lo
 }
 
 func (l *Hello01Logic) Hello01(req *types.Request) (resp *types.Response, err error) {
-	// todo: add your logic here and delete this line
-
+	// add your logic here and delete this line
+	resp = &types.Response{
+		Message: "hello " + req.Name,
+	}
 	return
 }
