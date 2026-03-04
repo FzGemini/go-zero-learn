@@ -23,6 +23,8 @@ func main() {
 	var c config.Config
 	conf.MustLoad(*configFile, &c)
 
+	// fmt.Println(c.Address)
+
 	server := rest.MustNewServer(c.RestConf)
 	defer server.Stop()
 
