@@ -13,3 +13,4 @@ service hello01-api {
 	get /from/:name (Request) returns (Response)
 }
 
+// 生成框架 goctl api go --api hello01.api --dir .
